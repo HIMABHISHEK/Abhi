@@ -1,12 +1,12 @@
 def selection_sort(nums):
 for i in range(len(nums)):
     minpos=i
-for j in range(i,len(nums)):
-    if nums[j]>minpos[j]:
-        minpos=j 
+    for j in range(i,len(nums)):
+        if nums[j]>nums[minpos]:
+            minpos=j 
  temp= nums[i]
- nums[i]=minpos[j]
- minpos[j]=temp 
+ nums[i]=nums[minpos]
+ nums[minpos]=temp 
  print(nums)
  
  nums=[2,4,6,8,10,1,3,5,7,9]
